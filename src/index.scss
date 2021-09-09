@@ -145,7 +145,7 @@ body {
     margin: 0;
     padding: 5px 10px;
     transition: background 0.2s ease-out 0s, color 0.2s ease-out 0s,
-    opacity 0.2s ease-out 0s;
+      opacity 0.2s ease-out 0s;
 
     &:hover {
       color: #fff;
@@ -171,6 +171,10 @@ body {
   overflow-x: hidden;
 }
 
+.result_block_hide {
+  display: none;
+}
+
 .result_clear_all {
   width: 200px;
   margin: 1% 0 5% 0;
@@ -192,8 +196,12 @@ body {
     margin: 0;
     padding: 5px 10px;
     transition: background 0.2s ease-out 0s, color 0.2s ease-out 0s,
-    opacity 0.2s ease-out 0s;
+      opacity 0.2s ease-out 0s;
   }
+}
+
+.result_clear_all_hide {
+  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -224,16 +232,23 @@ body {
     border: 2px solid #66b0bf;
     border-radius: 5px;
   }
+
+  .input_hide {
+    display: none;
+  }
 }
 
 .test_edit {
-  //display: none;
+  display: none;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
   margin-top: 15px;
   width: 100%;
   background-color: #fff;
 
   &:first-of-type {
-    display: block;
+    display: flex;
   }
 
   button {
@@ -258,6 +273,18 @@ body {
   }
 }
 
+.text_alert  {
+  display: none;
+}
+
+.text_alert_show {
+  display: block;
+}
+
+.test_edit_hide {
+  display: none;
+}
+
 .test_edit {
   .btn-add {
     position: static;
@@ -271,7 +298,7 @@ body {
     border-radius: 5px;
     border: 2px solid #b4a4a0;
     transition: background 0.2s ease-out 0s, color 0.2s ease-out 0s,
-    opacity 0.2s ease-out 0s;
+      opacity 0.2s ease-out 0s;
   }
 
   .btn-cancel {
@@ -286,7 +313,7 @@ body {
     border-radius: 5px;
     border: 2px solid #b4a4a0;
     transition: background 0.2s ease-out 0s, color 0.2s ease-out 0s,
-    opacity 0.2s ease-out 0s;
+      opacity 0.2s ease-out 0s;
   }
 
   button {
@@ -328,6 +355,10 @@ body {
     right: 30px;
     background: url(picture/icon1.png) no-repeat;
     background-size: cover;
+  }
+
+  .button_hide {
+    display: none;
   }
 
   .button_del {
@@ -412,7 +443,6 @@ body {
 
   .test_edit {
     margin-bottom: 15px;
-    text-align: center;
 
     input {
       display: block;
@@ -432,7 +462,6 @@ body {
   }
 
   .test_edit {
-
     .btn-add {
       width: 30%;
       margin: 0 2%;
