@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function ItemEdit({ onTask, index, setTaskEdit, setTasks, delTask, isCheck }) {
+const ItemEdit = ({ onTask, index, setTaskEdit, setTasks, delTask, isCheck }) => {
   const [value, setValue] = useState(onTask.text);
-  const onClickEdit = async () => {
-    await axios.patch(`http://localhost:8000/updateTask`, {
+  const onClickEdit = () => {
+    axios.patch(`http://localhost:8000/updateTask`, {
       _id: onTask._id,
       text: value
     }).then(res => {
@@ -12,6 +12,7 @@ function ItemEdit({ onTask, index, setTaskEdit, setTasks, delTask, isCheck }) {
       setTaskEdit(false);
     });
   }
+  
   return (
     <div className={'task-container'} key={`task-${index}`}>
       <p className={`text-task ${isCheck ? 'done-text' : ''}`}>{onTask.text}</p>

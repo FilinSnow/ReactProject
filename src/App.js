@@ -31,6 +31,7 @@ const App = () => {
       setTasks(res.data.data);
     });
   }
+  
   return (
     <div className="App">
       <div className="main_bg">

@@ -1,15 +1,16 @@
 import React from "react";
 import axios from "axios";
 
-function ItemNotEdit({ onTask, index, setTaskEdit, setTasks, delTask, isCheck }) {
-  const onCheck = async () => {
-    await axios.patch(`http://localhost:8000/updateTask`, {
+const ItemNotEdit = ({ onTask, index, setTaskEdit, setTasks, delTask, isCheck }) => {
+  const onCheck = () => {
+    axios.patch(`http://localhost:8000/updateTask`, {
       _id: onTask._id,
       isCheck: !isCheck
     }).then(res => {
       setTasks(res.data.data);
     });
   }
+
   return (
     <div className={'task-container'} key={`task-${index}`}>
       <input type='checkbox' checked={isCheck} onChange={(e) => onCheck(e.target.value)} />
